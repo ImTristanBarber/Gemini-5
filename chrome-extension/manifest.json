@@ -1,0 +1,41 @@
+{
+  "manifest_version": 2,
+  "name": "Gemini V",
+  "version": "0.0.1",
+  "description": "Load common resources from local disk to speed up page load.",
+  "permissions": [
+    "tabs",
+    "webRequest",
+    "webRequestBlocking",
+    "http://*/*",
+    "https://*/*"
+  ],
+
+
+  "minimum_chrome_version": "6.0.0.0",
+  "icons": {
+    "64": "logo.png"
+  },
+
+  "browser_action": {
+      "default_popup": "popup.html"
+  },
+
+  "web_accessible_resources": [
+    "files/jquery/*.js",
+    "files/bootstrap/*.js",
+    "files/bootstrap/*.css",
+    "files/bootstrap/fonts/*.eot",
+    "files/bootstrap/fonts/*.svg",
+    "files/bootstrap/fonts/*.ttf",
+    "files/bootstrap/fonts/*.woff",
+    "files/bootstrap/fonts/*.woff2",
+    "files/fontawesome/css/*.css",
+    "files/fontawesome/fonts/*.eot"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  }
+}
